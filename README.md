@@ -19,6 +19,7 @@ How making a few simple choices can drive freedom and flexibility.
 >   - [Better Focus on Problems](#better-focus-on-problems)
 >- [Perfect Kubernetes Stack](#perfect-kubernetes-stack)
 >- [Conclusion](#conclusion)
+>- [Disclaimer](#disclaimer)
 
 ---
 
@@ -28,7 +29,7 @@ Throughout my career there has always been the struggle around complexity of sys
 
 ![hype cycle](img/Gartner_Hype_Cycle.png)
 
-As technologists, we should always be asking ourselves " How can we flatten the curves? ". How can we make the technology easier, faster and more reliable? I had a Vice President of Sales once tell me "Andy, you have to dumb this shit down for me". I will never forget that statement. How can we flatten the curves for everyone? 
+As technologists, we should always be asking ourselves "How can we flatten the curves?". How can we make the technology easier, faster and more reliable? I had a Vice President of Sales once tell me "Andy, you have to dumb this shit down for me". I will never forget that statement. How can we flatten the curves for everyone?
 
 ## Current Thinking
 
@@ -85,8 +86,12 @@ I would deploy everything with Infrastructure as Code (IaC) principles. This wil
 
 ## Conclusion
 
-The "right toolbox" is the perfect toolbox.
+The "right toolbox" strategy is the perfect toolbox. Having just the right amount of tools reduces cognitive load and empowers your team. Plus the right tools make jobs easier.
 
 ![small toolbox](img/toolbox.jpg)
 
 Does Rancher and it's stack help flatten the curve? Being able to provide a some abstraction from the cloud provider will increase choice and freedom.
+
+## Disclaimer
+
+> "This publication was prepared or accomplished by the author in a personal capacity. All opinions expressed by the author of this publication are solely their current opinions and do not reflect the opinions of Rancher Federal, Inc., respective parent companies, or affiliates with which the author is affiliated. The author's opinions are based upon information they consider reliable, but neither Rancher Federal, Inc., nor its affiliates, nor the companies with which the author is affiliated, warrant its completeness or accuracy, and it should not be relied upon as such."
