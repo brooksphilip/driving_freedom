@@ -25,34 +25,31 @@ How making a few simple choices can drive freedom and flexibility.
 
 ## Introduction
 
-Throughout my career there has always been the struggle around complexity of systems. I seem to be talking about this more and more. The reason is that our infrastructure is getting more and more complex. While simultaneously adding more and more options. There has never been more choices for how and where to develop, build, and deploy applications. Just look at the job titles that are used today, Site Reliability Engineer (SRE), DevSecOps Engineer, and Cloud Engineer. It is really tough not to see every new technology in terms of [Gartner's Hype Cycle](https://www.gartner.com/en/documents/3887767).
+Throughout my career there has always been the struggle around complexity of systems. This topic comes up more and more. The reason is that our infrastructure is getting more and more complex. While simultaneously adding more and more options. There has never been more choices for how and where to develop, build, and deploy applications. Just look at the job titles that are used today, Site Reliability Engineer (SRE), DevSecOps Engineer, PLatform Engineer, and Cloud Engineer. It is really tough not to see every new technology in terms of [Gartner's Hype Cycle](https://www.gartner.com/en/documents/3887767).
 
 ![hype cycle](img/Gartner_Hype_Cycle.png)
 
-As technologists, we should always be asking ourselves "How can we flatten the curves?". How can we make the technology easier, faster and more reliable? I had a Vice President of Sales once tell me "Andy, you have to dumb this shit down for me". I will never forget that statement. How can we flatten the curves for everyone?
+As technologists, we should always be asking ourselves "How can we flatten the curves?". How can we make the technology easier, faster and more reliable? I had a Vice President of Sales once tell me "Andy, you have to dumb this shit down for me". I will never forget that statement. How can we flatten the curves for everyone? Let's focus on the Kubernetes and the "Cloud".
 
 ## Current Thinking
 
-The current trend is for companies, and governments, to leave the datacenter and head to the "cloud". Remember that the "cloud" is just someone elses computer. This trend has been very costly in the long run for many reasons. First and foremost are the technologies that need to be adopted to validate/simplify the move. Infrastructure as code is one of the technology, or core concepts, for a highly effective transition to the "cloud". The problem comes in when trying choose the right tool for the right job. Case in point, The Amazon Prime Video team published an [article](https://www.primevideotech.com/video-streaming/scaling-up-the-prime-video-audio-video-monitoring-service-and-reducing-costs-by-90) about how they saved money and improved performance by migrating away from Lamda. This article highlights a trend, that is showing up more and more, of moving back toward traditional monolithic software/system design. In response to the article [Adrain Cockcroft](https://adrianco.medium.com/so-many-bad-takes-what-is-there-to-learn-from-the-prime-video-microservices-to-monolith-story-4bd0970423d4) has a great quote.
+The current trend is for companies, and governments, to leave the datacenter and head to the "cloud". Remember that the "cloud" is just someone elses computer. This trend has been very costly in the long run for many reasons. First and foremost are the technologies that need to be adopted to validate/simplify the move. Infrastructure as code is one of the technology, or core concepts, for a highly effective transition to the "cloud". The problem comes in when trying to choose the right tool for the right job. Case in point, The Amazon Prime Video team published an [article](https://www.primevideotech.com/video-streaming/scaling-up-the-prime-video-audio-video-monitoring-service-and-reducing-costs-by-90) about how they saved money and improved performance by migrating away from Lamda. Lamda is a Serverless framework. This article highlights a trend, that is showing up more and more, of moving back toward traditional, monolithic, software/system desigsn. In response to the article [Adrain Cockcroft](https://adrianco.medium.com/so-many-bad-takes-what-is-there-to-learn-from-the-prime-video-microservices-to-monolith-story-4bd0970423d4) has a great quote.
 
 > *So maybe the answer to the question of whether to build with microservices or a monolith is neither, you should be calling an existing service rather than rolling your own.*
 
-I love the idea and simplicity of looking before building. Adding costs into the equation is another major headache for companies/governments. A few years ago Dropbox started a [Reverse Migration](https://www.datacenterknowledge.com/manage/dropbox-s-reverse-migration-cloud-own-data-centers-five-years) from the cloud to back on premise. Cost's was one of the major factors that drove this decision. In fact there are dozens, if not hundreds, of [Cloud Cost Optimization Companies](https://www.cloudzero.com/blog/cloud-cost-management-tools). An entire industry was built around the complexity of cost around the cloud providers. All of this makes you start to think if the "cloud" is a bad idea. Have you ever seen a mechanic moving their toolbox?
+I love the idea and simplicity of looking before building. Adding costs into the equation is another major headache for companies/governments. A few years ago Dropbox started a [Reverse Migration](https://www.datacenterknowledge.com/manage/dropbox-s-reverse-migration-cloud-own-data-centers-five-years) from the cloud to back on premise. Cost was one of the major factors that drove this decision. In fact there are dozens, if not hundreds, of [Cloud Cost Optimization Companies](https://www.cloudzero.com/blog/cloud-cost-management-tools) that can help reduce cloud costs. An entire industry was built around the complexity of cost using the cloud providers. All of this makes you start to think if the "cloud" is a bad idea. One fun way of looking at the level of effort is how mechanics move their toolbox between shops.
 
 ![tow truck](img/tow_truck.jpeg)
 
-This is a simple analogy for moving to the cloud and back.
-The answer is a little more complicated and nuanced. This is where the new strategy takes shape.
-
-NEEDS WORK
+The key take away is be a little more methodical about what and when things are moved. And to also make sure you have the tooling, aka truck, in place to help facilitate the move itself. What about the next move? Because newer technologies tend to be more complicated and nuanced. We need a newer approach the tooling we use. What if we had a thin abstraction layer that would dramatically improve the portable and speed at which we move?
 
 ## New Strategy
 
-Let's call the new strategy "right toolbox". The basic is idea follows what [Adrain Cockcroft](https://adrianco.medium.com/so-many-bad-takes-what-is-there-to-learn-from-the-prime-video-microservices-to-monolith-story-4bd0970423d4) wrote. It is around having a large enough toolbox to be able to pick the right tool for the job. While not trying to build the biggest toolbox around. Let's focus in on the Kubernetes ecosystem. Applying the "right toolbox" strategy really means looking at a few tools in each of the different product categories. Obviously we are big fans of the Rancher stack.
+Let's call the new strategy "right toolbox". The basic is idea follows what [Adrain Cockcroft](https://adrianco.medium.com/so-many-bad-takes-what-is-there-to-learn-from-the-prime-video-microservices-to-monolith-story-4bd0970423d4) wrote. It is around having a large enough toolbox to be able to pick the right tool for the job. While not trying to build the biggest toolbox around. Again focusing in on the Kubernetes ecosystem. Applying the "right toolbox" strategy really means looking at a few tools in each of the different product categories. Obviously we are big fans of the Rancher stack.
 
 ![rancher stack](img/rancher_stack.jpg)
 
-One of the key takeaways is that you can pick and choose what tools you want to use at all the different layers. Meaning, you can use any operating system. Any infrastructure. Any storage layer. Why is this important? Freedom.
+One of the key takeaways is that you can pick and choose what tools you want to use at all the different layers. Meaning, you can use any operating system. Any infrastructure. Any storage layer. Why is this important? This creates Freedom of Choice and prevents vendor lock-in. One area to look at is Multi-Cluster Managers. [Rancher](https://www.rancher.com/products/rancher) is one of the best for providing that thin layer of abstraction.
 
 ### Right Sizing
 
@@ -86,11 +83,11 @@ I would deploy everything with Infrastructure as Code (IaC) principles. This wil
 
 ## Conclusion
 
-The "right toolbox" strategy is the perfect toolbox. Having just the right amount of tools reduces cognitive load and empowers your team. Plus the right tools make jobs easier.
+Adopting the "right toolbox" strategy is a fantastic way to provide that thin abstraction layer to empower your teams to migrate and manage any cloud or on premise environment.
 
 ![small toolbox](img/toolbox.jpg)
 
-Does Rancher and it's stack help flatten the curve? Being able to provide a some abstraction from the cloud provider will increase choice and freedom.
+Does [Rancher](https://www.rancher.com/products/rancher) and it's stack help flatten the curve? We think it does. Please feel free to reach out to learn more about the [Rancher](https://www.rancher.com/products/rancher) and the other products.
 
 ## Disclaimer
 
