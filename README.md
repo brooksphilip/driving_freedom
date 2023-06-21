@@ -49,7 +49,7 @@ Let's call the new strategy "right toolbox". The basic is idea follows what [Adr
 
 ![rancher stack](img/rancher_stack.jpg)
 
-One of the key takeaways is that you can pick and choose what tools you want to use at all the different layers. Meaning, you can use any operating system. Any infrastructure. Any storage layer. Why is this important? This creates Freedom of Choice and prevents vendor lock-in. One area to look at is Multi-Cluster Managers. [Rancher](https://www.rancher.com/products/rancher) is the best for providing that thin layer of abstraction. And provides a single interface for wherever you compute happens to be.
+One of the key takeaways is that you can pick and choose what tools you want to use at all the different layers. Meaning, you can use any operating system. Any infrastructure. Any storage layer. Why is this important? This creates Freedom of Choice and prevents vendor lock-in. One area to look at is Multi-Cluster Managers. [Rancher](https://www.rancher.com/products/rancher) is the best for providing that thin layer of abstraction. And provides a single interface for wherever your compute happens to be.
 
 ### Right Sizing
 
@@ -61,15 +61,15 @@ From a scaling point of view. We can better manage the compute envelope with a m
 
 ### Reduce Operational Costs
 
-Speaking of cost, there are a few ways where the "right toolbox" can help. For starters, being able to eliminate costly tools that not needed. Secondary, is it eliminates the "tech debt" and cognitive load on the engineers having to maintain the tools. Third, is the abstraction away from the cloud vender specific tooling. Think about the cost of vendor lock when using their tools at every level of the stack. Today there are several tools that are single cloud vendor specific. If you want to switch cloud providers your teams will have to spend valuable time converting the business logic to the new framework/tooling. Fourth, is eliminating the "nickle and diming" that some cloud vendors do when it comes to ingress and egress of data.
+Speaking of cost, there are a few ways where the "right toolbox" can help. For starters, being able to eliminate costly tools that are not needed. Secondary, is it eliminates the "tech debt" and cognitive load on the engineers having to maintain the tools. Third, is the abstraction away from the cloud vender specific tooling. Think about the cost of vendor lock when using their tools at every level of the stack. Today there are several tools that are single cloud vendor specific. If you want to switch cloud providers your teams will have to spend valuable time converting the business logic to the new framework/tooling. Fourth, is eliminating the "nickle and diming" that some cloud vendors do when it comes to ingress and egress of data.
 
 ### Better Focus on Problems
 
-The new strategy is allowing all the DevSecOp/SRE/Platform Engineering/Developers to focus on the more important tasks. We are starting to see new trends in even abstracting away Kubernetes. [Acorn Labs](https://www.acorn.io/microservices-are-dead-long-live-the-monolith/) has a great article about how microservices are dead. [Acorn](https://acorn.io) is tool that abstracts away application deployment on Kubernetes. It simplifies code that is required to define an application and it's resource requirements. One slick advantage is being able to abstract away enough for transition to the next "Kubernetes".
+The new strategy is allowing all the DevSecOp/SRE/Platform Engineering/Developers to focus on the more important tasks. We are starting to see new trends in even abstracting away Kubernetes. [Acorn Labs](https://www.acorn.io/microservices-are-dead-long-live-the-monolith/) has a great article about how microservices are dead. [Acorn](https://acorn.io) is a tool that abstracts away application deployment on Kubernetes. It simplifies code that is required to define an application and its resource requirements. One slick advantage is being able to abstract away enough for transition to the next "Kubernetes".
 
 ## Perfect Kubernetes Stack
 
-What is the perfect Kubernetes Stack today? We have a nice [Raference Architecture for the Rancher Stack](https://github.com/clemenko/rancher-ref-arch) that will help with some of the specifics. For me, the perfect stack is one that will be malleable to as many situations as possible. One that can live nicely in a cloud or at the tactical edge. A stack that I can swap add a GPU or disconnect from the internet and know it will remain performant and reliable. We think using as many of the Rancher components as possible is the best idea. Some of the underlying principles for Rancher is security and interoperability. Rancher and RKE2 ( Kubernetes ) both have DISA Security Technical Implementation Guides (STIGs). We have several articles that go in depth on [NSA Hardening Guide](https://intelligencecommunitynews.com/ic-insiders-creating-a-secure-kubernetes-deployment-five-ways-the-new-nsa-kubernetes-hardening-guide-can-help/) and the [STIG Guidance](https://intelligencecommunitynews.com/ic-insiders-have-you-stigd-your-kubernetes-yet/). With all the security in mind, my "perfect stack" looks like:
+What is the perfect Kubernetes Stack today? We have a nice [Reference Architecture for the Rancher Stack](https://github.com/clemenko/rancher-ref-arch) that will help with some of the specifics. For me, the perfect stack is one that will be malleable to as many situations as possible. One that can live nicely in a cloud or at the tactical edge. A stack that I can swap or add a GPU or disconnect from the internet and know it will perform reliably. We think using as many of the Rancher components as possible is the best idea. Some of the underlying principles for Rancher is security and interoperability. Rancher and RKE2 ( Kubernetes ) both have DISA Security Technical Implementation Guides (STIGs). We have several articles that go in depth on [NSA Hardening Guide](https://intelligencecommunitynews.com/ic-insiders-creating-a-secure-kubernetes-deployment-five-ways-the-new-nsa-kubernetes-hardening-guide-can-help/) and the [STIG Guidance](https://intelligencecommunitynews.com/ic-insiders-have-you-stigd-your-kubernetes-yet/). With all the security in mind, my "perfect stack" looks like:
 
 - Hardware - [Dell R6615 AMD Epyc Server](https://www.dell.com/en-us/shop/servers-storage-and-networking/poweredge-r6615-rack-server/spd/poweredge-r6615/pe_r6615_16729_vi_vp) - Several 1Us for HA
 - HyperConverged - [Harvester](https://www.rancher.com/products/harvester) - VMs and containers
@@ -80,7 +80,7 @@ What is the perfect Kubernetes Stack today? We have a nice [Raference Architectu
 - Security - [Neuvector](https://neuvector.com/) - Proactive Security & Observability
 - GitOPS - [Rancher](https://www.rancher.com/products/rancher) - GitOPS is built in with Fleet
 
-I would deploy everything with Infrastructure as Code (IaC) principles. This will give us the ability to deploy to any cloud, any where, and at any time.
+I would deploy everything with Infrastructure as Code (IaC) principles. This will give us the ability to deploy to any cloud, anywhere, and at any time.
 
 ## Conclusion
 
@@ -90,7 +90,7 @@ Hopefully this helps in changing the perception that there is only "ONE" tool. A
 
 Does [Rancher](https://www.rancher.com/products/rancher) and it's stack help flatten the curve? We think it does. We also think [Rancher](https://www.rancher.com/products/rancher) provides the thin abstraction that facilitates massive Freedom of Choice.
 
-Please feel free to reach out to learn more about the [Rancher](https://www.rancher.com/products/rancher) and the other products.
+Please feel free to reach out to learn more about [Rancher](https://www.rancher.com/products/rancher) and the other products.
 
 ## Disclaimer
 
